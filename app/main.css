@@ -1,0 +1,50 @@
+body {
+  background: whitesmoke;
+  font-family: tahoma;
+}
+
+.maptile {
+  float:left;
+  margin:0;
+  width:128px;
+  height:128px;
+}
+
+.tile-grass1 {
+  background-image: url('/tiles/grass_tile.png');
+}
+
+.tile-grass2 {
+  background-image: url('/tiles/grass_tile.png');
+}
+
+.maprow {
+  margin:0px;
+  clear:left;
+}
+
+
+/* Bogus sprite definitions... to be replaced with real ones later. */
+#home {
+      width: 46px;
+      height: 44px;
+      background: url('/sprites/img_navsprites_hover.gif') 0 0;
+      display: block;
+      margin-left: 48px;
+      margin-top: 48px;
+    }
+
+    #prev {
+      width: 46px;
+      height: 44px;
+      background: url('/sprites/img_navsprites_hover.gif') -47px 0;
+      display: block;
+      margin-left: 48px;
+      margin-top: 48px;
+    }
+    #prev:hover {
+      background: url('/sprites/img_navsprites_hover.gif') -47px -45px;
+    }
+    #home:hover {
+      background: url('/sprites/img_navsprites_hover.gif') 0 -45px;
+    }

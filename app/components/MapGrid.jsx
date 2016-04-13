@@ -7,7 +7,7 @@ export default ({map}) => {
   return (
       <div>
         {map.map(mapRow =>
-          <div key={mapRow.id}><MapRow row={mapRow}/></div>
+          <MapRow row={mapRow} key={mapRow.id}/>
         )}
       </div>
     );

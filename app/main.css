@@ -18,6 +18,22 @@ body {
   background-image: url('/tiles/grass_tile.png');
 }
 
+.tile-dirt-4way {
+  background: url('/tiles/dungeon_tileset_128.png') -768px -384px;
+}
+
+.tile-dirt-topleft {
+  background: url('/tiles/dungeon_tileset_128.png') -896px -384px;
+}
+
+.tile-dirt-topright {
+  background: url('/tiles/dungeon_tileset_128.png') -896px -512px;
+}
+
+.tile-dirt-uponly {
+  background: url('/tiles/dungeon_tileset_128.png') -256px -512px;
+}
+
 .maprow {
   margin:0px;
   clear:left;
@@ -25,6 +41,14 @@ body {
 
 
 /* Bogus sprite definitions... to be replaced with real ones later. */
+
+#player {
+  width: 64px;
+  height: 64px;
+  background: url('/sprites/orc-64.png');
+  margin: 32px;
+}
+
 #home {
       width: 46px;
       height: 44px;

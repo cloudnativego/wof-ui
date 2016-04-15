@@ -3,15 +3,25 @@ import MapActions from '../actions/MapActions'
 // Creating bogus data for now to test rendering...
 // Will eventually render based on data coming from the map service.
 var mockCol = {
-  tile : "grass1",
+  tile : "dirt-topleft",
   id : "abc123",
-  sprite: null
+  sprite: null,
+  allowUp: false,
+  allowRight: true,
+  allowDown: true,
+  allowLeft: false,
+  walkable: true
 }
 
 var mockCol2 = {
-  tile : "grass1",
+  tile : "dirt-topright",
   id : "abc345",
-  sprite : "home"
+  sprite : null,
+  allowUp: false,
+  allowRight: false,
+  allowDown: true,
+  allowLeft: true,
+  walkable: true
 }
 
 var mockRow = {
@@ -20,15 +30,25 @@ var mockRow = {
 }
 
 var mockCol3 = {
-  tile : "grass2",
-  sprite : "prev",
-  id : "bdd1234"
+  tile : "dirt-uponly",
+  sprite : "player",
+  id : "bdd1234",
+  allowUp: true,
+  allowRight: false,
+  allowDown: false,
+  allowLeft: false,
+  walkable: true
 }
 
 var mockCol4 = {
-  tile : "grass2",
+  tile : "dirt-uponly",
   sprite: null,
-  id : "bdd4567"
+  id : "bdd4567",
+  allowUp: true,
+  allowRight: false,
+  allowDown: false,
+  allowLeft: false,
+  walkable: true
 }
 
 var mockRow2 = {

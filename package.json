@@ -40,8 +40,8 @@
     "alt-container": "^1.0.2",
     "alt-utils": "^1.0.0",
     "axios": "^0.9.1",
-    "react": "^0.14.7",
-    "react-dom": "^0.14.7"
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1"
   },
   "jest": {
     "unmockedModulePathPatterns": [

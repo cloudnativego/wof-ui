@@ -1,14 +1,14 @@
 {
-  "name": "bq-ui",
+  "name": "wof-ui",
   "version": "1.0.0",
-  "description": "BrowserQuest UI",
+  "description": "World of Fluxcraft UI",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cloudnativego/bq-ui.git"
+    "url": "https://github.com/cloudnativego/wof-ui.git"
   },
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no tests\" && exit 1",
+    "test": "jest",
     "build": "webpack",
     "watch": "webpack-dev-server"
   },
@@ -17,15 +17,19 @@
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.7.2",
+    "babel-jest": "^11.0.1",
     "babel-loader": "^6.2.4",
     "babel-plugin-array-includes": "^2.0.3",
     "babel-plugin-transform-class-properties": "^6.6.0",
     "babel-plugin-transform-object-assign": "^6.5.0",
     "babel-plugin-transform-object-rest-spread": "^6.6.5",
+    "babel-polyfill": "^6.7.4",
     "babel-preset-es2015": "^6.6.0",
     "babel-preset-react": "^6.5.0",
     "babel-preset-react-hmre": "^1.1.1",
     "css-loader": "^0.23.1",
+    "jest-cli": "^11.0.1",
+    "react-addons-test-utils": "^15.0.1",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1",
@@ -38,5 +42,25 @@
     "axios": "^0.9.1",
     "react": "^0.14.7",
     "react-dom": "^0.14.7"
+  },
+  "jest": {
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/react-dom",
+      "<rootDir>/node_modules/react-addons-test-utils"
+    ],
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "testFileExtensions": [
+      "es6",
+      "js",
+      "jsx"
+    ],
+    "moduleFileExtensions": [
+      "",
+      "js",
+      "json",
+      "jsx",
+      "es6"
+    ]
   }
 }

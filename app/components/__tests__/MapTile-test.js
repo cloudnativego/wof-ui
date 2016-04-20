@@ -7,14 +7,8 @@ import ReactDOM from 'react-dom';
 import TestUtils from  'react-addons-test-utils';
 import MapTile from '../MapTile';
 
-// -- Equivalent ES5 declarations --
-// var React = require('react');
-// var ReactDOM = require('react-dom');
-// var TestUtils = require('react-addons-test-utils');
-// var MapTile = require('../MapTile').default;
 
-
-describe('MapTile', () => {
+function renderMapTile () {
   var col = {
     tile : "dirt-uponly",
     sprite : "player",
@@ -26,14 +20,27 @@ describe('MapTile', () => {
     walkable: true
   };
 
-  var tile = TestUtils.renderIntoDocument(
-    <MapTile tile={col} key={col.id} />
-  );
+  const renderer = TestUtils.createRenderer();
+  renderer.render(<MapTile tile={col} key={col.id} />);
+  return renderer.getRenderOutput();
+}
 
-  var node = ReactDOM.findDOMNode(tile);
+function inspectObject(obj) {
+  for (const key of Object.keys(obj)) {
+    const val = obj[key];
+    console.log("Key: " + key)
+    console.log(val);
+  }
+}
 
-  it('stateless objects cannot be referenced without legerdemain', () => {
-    expect(tile).toBeFalsy();
-    expect(node).toBeFalsy();
+describe('MapTile', () => {
+  it('renders a div with background', () => {
+    const tile = renderMapTile();
+    expect(tile).toBeTruthy();
+    //inspectObject(tile);
+    expect(tile.props.className).toContain('dirt');
+    expect(tile.props.children.type).toEqual('img');
+    expect(tile.props.children.props.id).toEqual('player');
+
   });
 });

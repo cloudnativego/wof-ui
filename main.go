@@ -2,8 +2,7 @@ package main
 
 import (
 	"os"
-
-	"github.com/pivotalservices/usage-nozzle-ui/server"
+	"github.com/cloudnativego/wof-ui/server"
 )
 
 func main() {
